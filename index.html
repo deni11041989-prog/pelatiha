@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biodata Siswa</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border-radius: 8px;
+            border: 1px solid #aaa;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4c7eff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #325ee3;
+        }
+
+        #hasil {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9eeff;
+            border-radius: 8px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>Biodata Siswa</h2>
+
+    <label>Nama Lengkap:</label>
+    <input type="text" id="jessica febrianti">
+
+    <label>Kelas:</label>
+    <input type="text" id="sebelas">
+
+    <label>Umur:</label>
+    <input type="number" id="16">
+
+    <label>Hobi:</label>
+    <input type="text" id="menyanyi">
+
+    <button onclick="tampilkan()">Tampilkan Biodata</button>
+
+    <div id="hasil"></div>
+</div>
+
+<script>
+    function tampilkan() {
+        let nama = document.getElementById("jessica febrianti").value;
+        let kelas = document.getElementById("sebelas").value;
+        let umur = document.getElementById("16").value;
+        let hobi = document.getElementById("menyanyi").value;
+
+        document.getElementById("hasil").innerHTML = `
+            <h3>Hasil Biodata:</h3>
+            <p><b>Nama Lengkap:</b> ${nama}</p>
+            <p><b>Kelas:</b> ${kelas}</p>
+            <p><b>Umur:</b> ${umur} tahun</p>
+            <p><b>Hobi:</b> ${hobi}</p>
+        `;
+    }
+</script>
+
+</body>
+</html>
